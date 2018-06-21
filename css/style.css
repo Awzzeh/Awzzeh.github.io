@@ -1,0 +1,28 @@
+body{
+  margin:0;
+  padding:0;
+  background: linear-gradient(to bottom right, rgba(185, 152, 152, 0.3) 0%, rgba(187, 80, 226, 0.89) 100%) no-repeat fixed center;
+}
+
+.center_it{
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-template-areas:
+  '. banner banner .'
+  '. banner banner .';
+}
+
+.banner{
+  grid-area: banner;
+  background-color: rgba(63, 210, 243, 1);
+}
