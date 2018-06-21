@@ -16,7 +16,7 @@ body{
 
 .grid{
   display: grid;
-  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-template-columns: 1fr 9fr 9fr 1fr;
   grid-template-areas:
   '. banner banner .'
   '. banner banner .';
@@ -25,4 +25,15 @@ body{
 .banner{
   grid-area: banner;
   background-color: rgba(63, 210, 243, 1);
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-areas:
+  '. rose rose .';
+}
+
+.rose{
+  grid-area: rose;
+  background-color: brown;
+  border-radius: 50%;
+  height:
 }
