@@ -28,12 +28,22 @@ body{
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-areas:
-  '. rose rose .';
+  'intro rose rose job';
 }
 
 .rose{
   grid-area: rose;
-  background-color: brown;
-  border-radius: 50%;
-  height:
+}
+
+.intro{
+  grid-area: intro;
+
+}
+
+.job{
+  grid-area:job;
+}
+
+img{
+  width: 100%;
 }
