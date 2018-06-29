@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="description" content="Osvaldo Peralta's Portfolio">
   <meta name="keywords"  content="Web,Developer,Portfolio,Osvaldo,Peralta">
   <meta name="author" content="Osvaldo Peralta">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Osvaldo Peralta</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
-
-  <div class="top"></div>
-
   <div class="grid">
-    <div class="banner">
-      <div class="intro">
+    <nav class="nav">
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
 
+    <div class="banner">
+      <div class="intro" data-text="Osvaldo Peralta">
         Osvaldo Peralta
       </div>
       <div class="rose">
 
         <div class ="glitch">
-          <img src="images\lowpolyredrose.png" alt="Poly Rose">
-          <img src="images\lowpolyredroseglitch.png" alt="Poly Rose">
-          <img src="images\lowpolyredroseglitch2.png" alt="Poly Rose">
-          
+          <img src="images\animations\lowpolyredrose.png" alt="Poly Rose">
+          <img src="images\animations\lowlowpolyredrose.png" alt="Poly Rose">
+          <img src="images\animations\lowlowpolyredrose.png" alt="Poly Rose">
         </div>
       </div>
-      <div class="job">
+      <div class="job" data-text="Web Developer">
         Web Developer
       </div>
     </div>
+
+    <div class="top"></div>
+
+    <div class="collapsibles">
+      <button class="collapse">
+        <img src="images\icons&logos\HTML5.png" alt="HTML5" style="width:100%; max-width:400px">
+      </button>
+      <section class="collapse-content">
+        <p>HTML5</p>
+      </section>
+      <button class="collapse">
+        <img src="images\icons&logos\CSS3.png" alt="CSS3" style="width:100%; max-width:400px">
+      </button>
+      <section class="collapse-content">
+        <p>CSS3</p>
+      </section>
+      <button class="collapse">
+        <img src="images\icons&logos\JS.png" alt="Javascript" style="width:100%; max-width:400px">
+      </button>
+      <section class="collapse-content">
+        <p>Javascript</p>
+      </section>
+      <button class="collapse">
+        <img src="images\icons&logos\Ps.png" alt="Photoshop CC" style="width:100%; max-width:400px">
+      </button>
+      <section class="collapse-content">
+        <p>Photoshop CC</p>
+      </section>
+      <button class="collapse">
+        <img src="images\icons&logos\Ai.png" alt="Illustrator CC" style="width:100%; max-width:400px">
+      </button>
+      <section class="collapse-content">
+        <p>Illustrator CC</p>
+      </section>
+    </div>
+
+    <footer class="about">
+      <h2>About Me</h2>
+      <p>My name is Osvaldo Peralta and I am a Web Developer. </p>
+      <p><small>Osvaldo Peralta | 2018</small></p>
+    </footer>
   </div>
-
-
 </body>
+<script src="js/main.js"></script>
 </html>

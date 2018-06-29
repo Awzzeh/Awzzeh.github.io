@@ -1,12 +1,138 @@
 body{
   margin:0;
   padding:0;
-  font: 17px "Trebuchet MS", Helvetica, sans-serif;
+  font-size:17px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   background: linear-gradient(to bottom right, rgba(185, 152, 152, 0.3) 0%, rgba(187, 80, 226, 0.89) 100%) no-repeat fixed center;
+}
+
+.rose{
+  grid-area: rose;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  'banner banner'
+  'banner banner'
+  'coll coll'
+  'nav nav'
+  'about about';
+}
+
+.banner{
+  grid-area: banner;
+  height:100vh;
+  background-color: rgba(63, 210, 243, 1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  'intro intro'
+  'rose rose'
+  'job job';
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.collapsibles{
+  grid-area: coll;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  'coll-cont';
+  text-align: center;
+  font: 30px bold;
+
+}
+
+.collapse{
+  background-color: rgb(194, 21, 41);
+  color: rgb(21, 194, 174);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: all .5s linear;
+}
+
+.active, .collapse:hover {
+  background-color: rgb(255, 31, 87);
+  color: rgb(8, 107, 51);
+}
+
+.collapse-content{
+  grid-area: coll-cont;
+  color: rgb(18, 160, 255);
+  font: 13px;
+  letter-spacing: normal;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;
+  overflow: hidden;
+  background-color: rgb(230, 211, 162);
+  transition: all 1s linear;
+  -webkit-box-shadow: inset 10px 10px 37px -11px rgba(0,0,0,0.69);
+  -moz-box-shadow: inset 10px 10px 37px -11px rgba(0,0,0,0.69);
+  box-shadow: inset 10px 10px 37px -11px rgba(0,0,0,0.69);
+}
+
+/* @media screen and (min-width: 500px){
+
+} */
+
+@media screen and (min-width: 768px){
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 9fr 9fr 1fr;
+    grid-template-areas:
+
+    '. . nav .'
+    '. banner banner .'
+    '. banner banner .'
+    'top top top top'
+    'coll coll coll coll'
+    'coll coll coll coll'
+    'coll coll coll coll'
+    'about about about about'
+    'about about about about';
+  }
+  .banner{
+    grid-area: banner;
+    height:96vh;
+    border: .3px solid rgba(155, 222, 237, .3);
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+    'intro intro intro intro'
+    'rose rose rose rose'
+    'job job job job';
+  }
+  .glitch >img:nth-child(2){
+    left: 10px;
+  }
+  .intro::before,
+  .job::before{
+    left: 4px;
+  }
+  .nav{
+    background-color: transparent !important;
+  }
+  a{
+    text-align: right;
+  }
 }
 
 .top{
   padding-top: calc(1vh / .3);
+  grid-area: top;
 }
 
 .center_it{
@@ -19,30 +145,6 @@ body{
   left: 0;
 }
 
-.grid{
-  display: grid;
-  grid-template-columns: 1fr 9fr 9fr 1fr;
-  grid-template-areas:
-  '. banner banner .'
-  '. banner banner .';
-}
-
-.banner{
-  grid-area: banner;
-  background-color: rgba(63, 210, 243, 1);
-  border: .3px solid rgba(155, 222, 237, .3);
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-areas:
-  'intro intro intro intro'
-  'rose rose rose rose'
-  'job job job job';
-}
-
-.rose{
-  grid-area: rose;
-}
-
 .intro{
   grid-area: intro;
 }
@@ -53,146 +155,63 @@ body{
 
 .intro,
 .job{
+  position:relative;
   text-align: center;
   color: rgba(138, 10, 31, 1);
-  text-shadow: 3px 0px 10px gray;
+  /* text-shadow: 2px 0px 5px gray; */
   font-size:30px;
   font-weight: bold;
-  letter-spacing: 5px;
-  transition: all .7s ease-out;
+  letter-spacing: calc(1vw / .3);
+  transition: all .3s ease-out;
   cursor:pointer;
 }
 
 .intro:hover,
 .job:hover{
-    letter-spacing: calc(1vw / .3) ;
+  font-size: 40px;
 }
 
-img{
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
+.about{
+  grid-area: about;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  ''
+  ;
+  font-size: 25px;
+  text-align: center;
+  background: gray;
+  padding-top: 20px;
+  margin-bottom: -25px;
 }
 
-.glitch{
-  position:relative;
-  width: 100%;
-  height: 75vh;
+.nav{
+  grid-area: nav;
+  text-align: right;
+  transition: all .5s ease-out;
+  background-color: gray;
+  padding-top: 5px;
 }
 
-.glitch > img{
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+a{
+  position: relative;
+  text-decoration: none;
+  color: red;
+  text-shadow: 2px 0px 4px rgba(120, 120, 120, 1);
+  letter-spacing: 8px;
+  font: 20px/0px Arial, Verdana;
+  transition: all .4s ease-out;
+  padding-top:5px;
 }
 
-.glitch >img:nth-child(2),
-.glitch >img:nth-child(3){
-  clip-path: polygon(0% 0%,0% 0%,0% 0%,0% 0%);
+.nav >a:nth-child(2){
+  align: right;
+  }
+
+.nav >a:nth-child(1){
+  padding-right:10px;
 }
 
-
-.glitch >img:nth-child(2){
-  animation: glitch-1 6s infinite ease-out alternate-reverse;
-}
-
-.glitch >img:nth-child(3){
-  animation: glitch-2 10s infinite ease-in alternate-reverse;
-}
-
-@keyframes glitch-1 {
-	0% {
-		clip-path: polygon(17% 82%, 44% 80%, 84% 23%, 97% 38%);
-	}
-
-	10% {
-		clip-path: polygon(19% 20%, 60% 26%, 1% 41%, 78% 56%);
-	}
-
-	20% {
-		clip-path: polygon(80% 77%, 42% 69%, 84% 31%, 40% 92%);
-	}
-
-	30% {
-		clip-path: polygon(53% 94%, 64% 61%, 47% 91%, 25% 48%);
-	}
-
-	40% {
-		clip-path: polygon(34% 51%, 48% 73%, 83% 37%, 87% 67%);
-	}
-
-	50% {
-		clip-path: polygon(66% 73%, 18% 75%, 48% 57%, 4% 10%);
-	}
-
-	60% {
-		clip-path: polygon(31% 50%, 35% 38%, 36% 3%, 8% 90%);
-	}
-
-	70% {
-		clip-path: polygon(26% 72%, 19% 91%, 65% 75%, 48% 80%);
-	}
-
-	80% {
-		clip-path: polygon(1% 23%, 81% 55%, 18% 77%, 44% 86%);
-	}
-
-	90% {
-		clip-path: polygon(84% 53%, 13% 5%, 51% 94%, 43% 25%);
-	}
-
-	100% {
-		clip-path: polygon(42% 13%, 99% 73%, 13% 41%, 6% 32%);
-	}
-}
-@keyframes glitch-2 {
-	0% {
-		clip-path: polygon(6% 94%, 74% 79%, 51% 29%, 58% 11%);
-	}
-
-	10% {
-		clip-path: polygon(11% 81%, 20% 8%, 77% 11%, 84% 3%);
-	}
-
-	20% {
-		clip-path: polygon(54% 36%, 30% 51%, 37% 4%, 9% 44%);
-	}
-
-	30% {
-		clip-path: polygon(3% 54%, 45% 20%, 73% 87%, 94% 13%);
-	}
-
-	40% {
-		clip-path: polygon(54% 85%, 83% 22%, 76% 39%, 84% 5%);
-	}
-
-	50% {
-		clip-path: polygon(72% 5%, 87% 41%, 60% 84%, 63% 8%);
-	}
-
-	60% {
-		clip-path: polygon(10% 66%, 97% 81%, 68% 25%, 77% 62%);
-	}
-
-	70% {
-		clip-path: polygon(42% 94%, 52% 50%, 90% 92%, 21% 100%);
-	}
-
-	80% {
-		clip-path: polygon(41% 61%, 52% 14%, 56% 35%, 29% 93%);
-	}
-
-	90% {
-		clip-path: polygon(54% 15%, 46% 20%, 23% 85%, 3% 67%);
-	}
-
-	100% {
-		clip-path: polygon(50% 23%, 64% 2%, 96% 6%, 9% 71%);
-	}
+a:hover{
+  color: white;
+  text-decoration:line-through;
 }
