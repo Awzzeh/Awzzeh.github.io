@@ -45,12 +45,8 @@ img{
 
 .collapsibles{
   grid-area: coll;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  'coll-cont';
   text-align: center;
   font: 30px bold;
-
 }
 
 .collapse{
@@ -61,6 +57,11 @@ img{
   border: none;
   outline: none;
   transition: all .5s linear;
+  -webkit-box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.75);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .active, .collapse:hover {
@@ -69,7 +70,6 @@ img{
 }
 
 .collapse-content{
-  grid-area: coll-cont;
   color: rgb(18, 160, 255);
   font: 13px;
   letter-spacing: normal;
@@ -79,14 +79,7 @@ img{
   overflow: hidden;
   background-color: rgb(230, 211, 162);
   transition: all 1s linear;
-  -webkit-box-shadow: inset 10px 10px 37px -11px rgba(0,0,0,0.69);
-  -moz-box-shadow: inset 10px 10px 37px -11px rgba(0,0,0,0.69);
-  box-shadow: inset 10px 10px 37px -11px rgba(0,0,0,0.69);
 }
-
-/* @media screen and (min-width: 500px){
-
-} */
 
 @media screen and (min-width: 768px){
   .grid{
@@ -114,6 +107,14 @@ img{
     'intro intro intro intro'
     'rose rose rose rose'
     'job job job job';
+  }
+  .about{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    '. me . .'
+    '. icons icons .'
+    'who who who who';
+
   }
   .glitch >img:nth-child(2){
     left: 10px;
@@ -158,7 +159,6 @@ img{
   position:relative;
   text-align: center;
   color: rgba(138, 10, 31, 1);
-  /* text-shadow: 2px 0px 5px gray; */
   font-size:30px;
   font-weight: bold;
   letter-spacing: calc(1vw / .3);
@@ -173,26 +173,37 @@ img{
 
 .about{
   grid-area: about;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-  ''
-  ;
-  font-size: 25px;
+  'me'
+  'icons'
+  'who';
+  font-size: 19px;
   text-align: center;
-  background: gray;
+  background: rgba(92, 35, 35, 1);
+  color: rgba(194, 219, 207, 1);
   padding-top: 20px;
-  margin-bottom: -25px;
+  margin-bottom: -50px;
+}
+
+.me{
+  grid-area: me;
 }
 
 .nav{
   grid-area: nav;
   text-align: right;
   transition: all .5s ease-out;
-  background-color: gray;
+  background-color: rgba(92, 35, 35, 1);
   padding-top: 5px;
 }
 
 a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.nav >a{
   position: relative;
   text-decoration: none;
   color: red;
@@ -203,15 +214,33 @@ a{
   padding-top:5px;
 }
 
-.nav >a:nth-child(2){
-  align: right;
-  }
-
 .nav >a:nth-child(1){
   padding-right:10px;
 }
 
 a:hover{
   color: white;
+}
+
+.nav >a:hover{
   text-decoration:line-through;
+}
+
+.logos,
+.icons{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position:relative;
+  justify-content: center;
+}
+
+.icons{
+  grid-area:icons;
+}
+
+.who{
+  grid-area: who;
+  padding-top: 10px;
+  padding-bottom:5px;
 }
