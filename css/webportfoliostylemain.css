@@ -1,1 +1,119 @@
+*{
+  box-sizing: border-box;
+}
 
+body{
+  background-color:white;
+  height:100vh;
+  width:100vw;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Righteous', cursive;
+  line-height: 1.4em;
+  padding:15px 0;
+}
+h1{
+  font-size:38px;
+}
+h2{
+  font-size:32px;
+}
+h3{
+  font-size:28px;
+}
+h4{
+  font-size:24px;
+}
+h5{
+  font-size: 20px;
+}
+h6{
+  font-size: 18px;
+}
+p{
+  font-family: 'PT Sans', sans-serif;
+  font-size:16px;
+  line-height: 1.5em;
+  color:#17150d;
+  max-width:850px;
+  text-align:left;
+  min-width: 150px;
+}
+
+#main{
+  padding:0 2%;
+}
+
+menu{
+  text-align: right;
+  background-color:#080808;
+  padding:15px;
+}
+
+.main-menu{
+  margin:0 5px;
+}
+
+a{
+  text-decoration: none;
+  color:#C9B100;
+  font-family: 'Righteous', cursive;
+  transition:all .2s;
+}
+
+a:hover{
+  color:#FCE42A;
+  text-decoration: line-through;
+}
+
+a:active{
+  color:#FCE42A;
+}
+
+.black-out{
+  background-color:#080808;
+  display:block;
+
+}
+
+.text-contrast{
+  color:#e0e0e0;
+}
+
+#sub-title-text{
+  text-align: right;
+  max-width:100%;
+}
+
+#max-intro-width{
+  max-width:1150px;
+  display:block;
+  margin:0 auto;
+}
+
+text{
+  font-family: 'Anton', sans-serif;
+}
+
+svg{
+  width:100%;
+}
+
+.intro-text{
+  fill:#e0e0e0;
+}
+
+#intro-myname{
+  fill:#FCE42A;
+  font-family: 'Righteous', cursive;
+}
+
+#menu-contact-info{
+  float:left;
+}
+
+/*
+font-family: 'PT Sans', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Anton', sans-serif;
+*/
