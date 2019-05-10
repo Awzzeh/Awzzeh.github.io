@@ -32,19 +32,20 @@ h6{
 }
 p{
   font-family: 'PT Sans', sans-serif;
-  font-size:16px;
+  font-size:18px;
   line-height: 1.5em;
   color:#17150d;
   max-width:850px;
   text-align:left;
   min-width: 150px;
+  margin:10px;
 }
 
 #main{
   padding:0 2%;
 }
 
-menu{
+nav{
   text-align: right;
   background-color:#080808;
   padding:15px;
@@ -73,7 +74,6 @@ a:active{
 .black-out{
   background-color:#080808;
   display:block;
-
 }
 
 .text-contrast{
@@ -108,8 +108,8 @@ svg{
   font-family: 'Righteous', cursive;
 }
 
-#menu-contact-info{
-  float:left;
+#nav-align-right{
+  float:right;
 }
 
 /*
