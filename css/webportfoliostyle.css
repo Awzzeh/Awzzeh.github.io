@@ -80,34 +80,6 @@ a:active{
   color:#e0e0e0;
 }
 
-#sub-title-text{
-  text-align: right;
-  max-width:100%;
-}
-
-#max-intro-width{
-  max-width:1150px;
-  display:block;
-  margin:0 auto;
-}
-
-text{
-  font-family: 'Anton', sans-serif;
-}
-
-svg{
-  width:100%;
-}
-
-.intro-text{
-  fill:#e0e0e0;
-}
-
-#intro-myname{
-  fill:#FCE42A;
-  font-family: 'Righteous', cursive;
-}
-
 #nav-align-right{
   float:right;
 }
