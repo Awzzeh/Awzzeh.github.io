@@ -71,11 +71,6 @@ a:active{
   color:#FCE42A;
 }
 
-.black-out{
-  background-color:#080808;
-  display:block;
-}
-
 .text-contrast{
   color:#e0e0e0;
 }
@@ -83,6 +78,81 @@ a:active{
 #nav-align-right{
   float:right;
 }
+
+.portfolio{
+  background-color:#080808;
+  display:grid;
+  grid-template-areas:
+    "site-card"
+    "project-card";
+    justify-content: space-evenly;
+    width:100%;
+}
+
+#site-card{
+  grid-area: site-card;
+  display:grid;
+  grid-template-areas:
+  "site1"
+  "site2"
+  "site3";
+  grid-column-gap: 4%;
+  padding: 15px;
+}
+
+#project-card{
+  grid-area: project-card;
+  display:grid;
+  grid-template-areas:
+  "project1"
+  "project2"
+  "project3";
+  grid-column-gap: 4%;
+  padding: 15px;
+}
+
+#site1{
+  grid-area: site1;
+}
+
+#site2{
+  grid-area: site2;
+}
+
+#site3{
+  grid-area: site3;
+}
+
+#project1{
+  grid-area: project1;
+}
+
+#project2{
+  grid-area: project2;
+}
+
+#project3{
+  grid-area: project3;
+}
+
+@media only screen and (min-width: 768px){
+  #site-card{
+    grid-template-areas:
+    "site1 site2 site3";
+  }
+  #project-card{
+    grid-template-areas:
+    "project1 project2 project3";
+  }
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
 
 /*
 font-family: 'PT Sans', sans-serif;
