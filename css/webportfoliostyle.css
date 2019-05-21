@@ -86,8 +86,8 @@ a:active{
   "site-card"
   "project-card";
   justify-content: space-evenly;
-  width:100%;
-  grid-row-gap:4%;
+  max-width:100%;
+  grid-row-gap:25px;
 }
 
 #site-card{
@@ -97,9 +97,11 @@ a:active{
   "site1"
   "site2"
   "site3";
-  grid-column-gap: 4%;
-  grid-row-gap:4%;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
   padding: 15px;
+  max-width:100%;
+  min-width: 0;
 }
 
 #project-card{
@@ -109,9 +111,11 @@ a:active{
   "project1"
   "project2"
   "project3";
-  grid-column-gap: 4%;
-  grid-row-gap:4%;
+  grid-column-gap: 25px;
+  grid-row-gap:25px;
   padding: 15px;
+  max-width:100%;
+  min-width: 0;
 }
 
 #site1{
@@ -156,8 +160,8 @@ a:active{
 }
 
 .card{
-  height: 350px;
-  width: 350px;
+  width: 275px;
+  height: 275px;
   background-color:#e0e0e0;
   max-width:100%;
 }
