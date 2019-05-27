@@ -80,69 +80,42 @@ a:active{
   float:right;
 }
 
-.cards {
-  background-color:#080808;
-}
-
-.cards > ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  grid-gap: 25px;
-}
-
-.cards > ul > li {
-  border: 1px solid #E2E2E2;
-  border-radius: 2px;
-}
-
-.cards > ul > li > figure {
-  max-height: 220px;
-  overflow: hidden;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  position: relative;
-}
-
-.cards > ul > li > figure > img {
-  width: 100%;
-}
-
-.cards > ul > li > figure > figcaption {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(0,0,0,.7);
-  width: 100%;
-}
-
-.cards > ul > li > figure > figcaption > h3 {
-  color: white;
-  padding: 10px;
-}
-
-.cards > ul > li > p {
-  line-height: 1.5;
-  padding: 10px;
-  color: #e2e2e2;
-}
-
-.cards > ul > li > a {
-  padding: 10px;
-  margin: 10px;
-}
-
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.section-title{
-  text-align: center;
+.text-contrast > p{
+  color:#e0e0e0;
 }
 
-#my-work{
+.aboutme{
+  background-color:#080808;
+}
+
+.aboutme-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+
+.aboutme-text{
+
+}
+
+.aboutme-image{
+
+}
+
+#aboutme-intro{
+  padding: 0 5px;
   color: #C9B100;
 }
+
+#aboutme-img{
+  width: 100%;
+}
+
 /*
 font-family: 'PT Sans', sans-serif;
 font-family: 'Righteous', cursive;
