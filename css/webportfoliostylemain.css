@@ -112,6 +112,17 @@ svg{
   float:right;
 }
 
+main{
+  min-height: 93vh;
+  background-color: #080808;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /*
 font-family: 'PT Sans', sans-serif;
 font-family: 'Righteous', cursive;

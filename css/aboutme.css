@@ -114,6 +114,31 @@ a:active{
 
 #aboutme-img{
   width: 100%;
+  padding:5px 10px 0 0;
+  transition: all .3s;
+}
+
+#aboutme-img:hover{
+  filter: grayscale(100%);
+}
+
+.text-placement-right{
+  text-align: right;
+}
+
+.section-title{
+
+}
+
+.section-title-icon{
+  float:left;
+  font-size: 25px;
+  padding: 20px 5px 0 0;
+}
+
+main{
+  min-height: 93vh;
+  background-color: #080808;
 }
 
 /*
