@@ -1,0 +1,148 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color:white;
+  height:100vh;
+  width:100vw;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Righteous', cursive;
+  line-height: 1.4em;
+  padding:15px 0;
+}
+h1{
+  font-size:38px;
+}
+h2{
+  font-size:32px;
+}
+h3{
+  font-size:28px;
+}
+h4{
+  font-size:24px;
+}
+h5{
+  font-size: 20px;
+}
+h6{
+  font-size: 18px;
+}
+p{
+  font-family: 'PT Sans', sans-serif;
+  font-size:18px;
+  line-height: 1.5em;
+  color:#17150d;
+  max-width:850px;
+  text-align:left;
+  min-width: 150px;
+  padding: 10px;
+}
+
+#main{
+  padding:2vh 2vw;
+  background-color:#080808;
+}
+
+nav{
+  text-align: right;
+  background-color:#080808;
+  padding:15px;
+}
+
+.main-menu{
+  margin:0 5px;
+}
+
+a{
+  text-decoration: none;
+  color:#C9B100;
+  font-family: 'Righteous', cursive;
+  transition:all .2s;
+}
+
+a:hover{
+  color:#FCE42A;
+  text-decoration: line-through;
+}
+
+a:active{
+  color:#FCE42A;
+}
+
+.text-contrast{
+  color:#e0e0e0;
+}
+
+#nav-align-right{
+  float:right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text-contrast > p{
+  color:#e0e0e0;
+}
+
+.aboutme{
+  background-color:#080808;
+}
+
+.aboutme-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+
+.aboutme-text{
+
+}
+
+.aboutme-image{
+
+}
+
+#aboutme-intro{
+  padding: 0 5px;
+  color: #C9B100;
+}
+
+#aboutme-img{
+  width: 100%;
+  padding:5px 10px 0 0;
+  transition: all .3s;
+}
+
+#aboutme-img:hover{
+  filter: grayscale(100%);
+}
+
+.text-placement-right{
+  text-align: right;
+}
+
+.section-title{
+
+}
+
+.section-title-icon{
+  float:left;
+  font-size: 25px;
+  padding: 20px 5px 0 0;
+}
+
+main{
+  min-height: 93vh;
+  background-color: #080808;
+}
+
+/*
+font-family: 'PT Sans', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Anton', sans-serif;
+*/

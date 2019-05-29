@@ -1,0 +1,156 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color:white;
+  height:100vh;
+  width:100vw;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Righteous', cursive;
+  line-height: 1.4em;
+  padding:15px 0;
+}
+h1{
+  font-size:38px;
+}
+h2{
+  font-size:32px;
+}
+h3{
+  font-size:28px;
+}
+h4{
+  font-size:24px;
+}
+h5{
+  font-size: 20px;
+}
+h6{
+  font-size: 18px;
+}
+p{
+  font-family: 'PT Sans', sans-serif;
+  font-size:18px;
+  line-height: 1.5em;
+  color:#17150d;
+  max-width:850px;
+  text-align:left;
+  min-width: 150px;
+  padding: 10px;
+}
+
+#main{
+  padding:2vh 2vw;
+  background-color:#080808;
+}
+
+nav{
+  text-align: right;
+  background-color:#080808;
+  padding:15px;
+}
+
+.main-menu{
+  margin:0 5px;
+}
+
+a{
+  text-decoration: none;
+  color:#C9B100;
+  font-family: 'Righteous', cursive;
+  transition:all .2s;
+}
+
+a:hover{
+  color:#FCE42A;
+  text-decoration: line-through;
+}
+
+a:active{
+  color:#FCE42A;
+}
+
+.text-contrast{
+  color:#e0e0e0;
+}
+
+#nav-align-right{
+  float:right;
+}
+
+.cards {
+  background-color:#080808;
+}
+
+.cards > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-gap: 25px;
+}
+
+.cards > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: 2px;
+}
+
+.cards > ul > li > figure {
+  max-height: 220px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+}
+
+.cards > ul > li > figure > img {
+  width: 100%;
+}
+
+.cards > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+}
+
+.cards > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: 10px;
+}
+
+.cards > ul > li > p {
+  line-height: 1.5;
+  padding: 10px;
+  color: #e2e2e2;
+}
+
+.cards > ul > li > a {
+  padding: 10px;
+  margin: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.section-title{
+  text-align: center;
+}
+
+#my-work{
+  color: #C9B100;
+}
+
+main{
+  min-height: 93vh;
+  background-color: #080808;
+}
+
+/*
+font-family: 'PT Sans', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Anton', sans-serif;
+*/
