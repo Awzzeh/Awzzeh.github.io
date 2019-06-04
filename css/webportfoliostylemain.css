@@ -123,6 +123,11 @@ main{
   display: table;
 }
 
+#h1-myname{
+  font-size:16px;
+  padding:0;
+}
+
 /*
 font-family: 'PT Sans', sans-serif;
 font-family: 'Righteous', cursive;
