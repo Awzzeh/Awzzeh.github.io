@@ -1,2 +1,2 @@
 # Awzzeh.github.io
-Osvaldo Peralta's Personal Website
+Osvaldo Peralta's Portfolio Website
