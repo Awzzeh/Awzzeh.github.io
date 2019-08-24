@@ -128,6 +128,10 @@ main{
   padding:0;
 }
 
+span{
+  padding:10px;
+}
+
 /*
 font-family: 'PT Sans', sans-serif;
 font-family: 'Righteous', cursive;
